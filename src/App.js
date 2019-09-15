@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import FormikForm from './components/forms/FormikForm';
+import BaiscForm from './components/forms/basicForm';
+import UpdatePerson from './components/hooks/useStateHook';
+import MyEnhancedForm from './components/forms/AdvanceForms';
+import LoginForm from './components/mosh/forms/LoginForm';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <FormikForm></FormikForm> */}
+    {/* <UpdatePerson></UpdatePerson> */}
+    {/* <MyEnhancedForm></MyEnhancedForm> */}
+     <LoginForm></LoginForm>
     </div>
   );
 }
