@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
 
 class forms extends Component {
-  state = {
-    formElements: {},
-    errors: {}
-  };
-  
   submitHandler = e => {
-    const errors = this.validate();
     e.preventDefault();
-    console.log('errors', errors);
-    this.setState({ errors });
+   // const errors = this.validate();
+    //console.log('errors', errors);
+  //  this.setState({ errors });
     console.log('form state', this.state);
   };
 
-  onChangeHandler = ({ target: input }) => {
+  onChangeHandler = (e, obj, index) => {
+    // debugger;
+    const { target: input } = e
+    console.log('e', e);
+    console.log('e', e.attributes);
+    console.log(input.getAttribute('data-uuid'));
     const formElements = { ...this.state.formElements };
-    formElements[input.name] = input.value;
-    const errors = this.checkValidity(input.name, input.value);
-    this.setState({ formElements, errors });
-    console.log('ERRORS', errors);
+    if(obj) {
+      formElements[obj][index][input.name] = { value: input.value };
+    } else formElements[input.name] = { value: input.value };
+    
+    if (input.dataset.uuid) {
+      formElements[input.name] = { id: input.dataset.uuid };
+    }
+   // const errors = this.checkValidity(input.name, input.value);
+    this.setState({ formElements });
+   // console.log('ERRORS', errors);
+    console.log('formState', formElements);
   };
 
   checkValidity = (name, value) => {

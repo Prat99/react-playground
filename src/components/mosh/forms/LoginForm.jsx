@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Form from './form';
+import './forms.css';
 
 class LoginForm extends Form {
   constructor(props) {
@@ -11,12 +12,12 @@ class LoginForm extends Form {
   render() {
     const { errors } = this.state;
     return (
-      <div className="container">
+      <div className="container loginForm">
         <h1>Login Form</h1>
         <form>
           <div className="form-group">
             <label htmlFor="username">Username</label>
-            <input
+            <input  
               id="username"
               name="username"
               onChange={this.onChangeHandler}
