@@ -5,6 +5,7 @@ import UpdatePerson from './components/hooks/useStateHook';
 import MyEnhancedForm from './components/forms/AdvanceForms';
 import LoginForm from './components/mosh/forms/LoginForm';
 import CreatePerson from './components/mosh/forms/createPerson';
+import CreateTeamMember from './components/mosh/forms/createTeamMember';
 
 
 
@@ -15,7 +16,8 @@ function App() {
     {/* <UpdatePerson></UpdatePerson> */}
     {/* <MyEnhancedForm></MyEnhancedForm> */}
      {/* <LoginForm></LoginForm> */}
-     <CreatePerson></CreatePerson>
+     {/* <CreatePerson></CreatePerson> */}
+     <CreateTeamMember></CreateTeamMember>
     </div>
   );
 }

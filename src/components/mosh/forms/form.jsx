@@ -13,8 +13,8 @@ class forms extends Component {
     // debugger;
     const { target: input } = e
     console.log('e', e);
-    console.log('e', e.attributes);
-    console.log(input.getAttribute('data-uuid'));
+    // console.log('e', e.attributes);
+  //  console.log(input.getAttribute('data-uuid'));
     const formElements = { ...this.state.formElements };
     if(obj) {
       formElements[obj][index][input.name] = { value: input.value };
